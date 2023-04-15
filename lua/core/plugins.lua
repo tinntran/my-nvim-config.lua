@@ -19,7 +19,17 @@ return require('packer').startup(function(use)
   use 'kdheepak/tabline.nvim'
   use 'nvim-treesitter/nvim-treesitter'
 
-  use 'neovim/nvim-lspconfig'
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+  -- completion
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -30,14 +40,11 @@ return require('packer').startup(function(use)
   use 'hrsh7th/vim-vsnip'
   use 'onsails/lspkind.nvim'
 
+  -- terminal
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    'akinsho/toggleterm.nvim', tag = '*', config = function()
+      require("toggleterm").setup()
+    end
   }
 
   use {

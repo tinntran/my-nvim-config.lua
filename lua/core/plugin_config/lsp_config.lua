@@ -17,4 +17,6 @@ local lsp = require('lspconfig')
 lsp.lua_ls.setup {}
 lsp.jdtls.setup {}
 lsp.rust_analyzer.setup {}
+lsp.csharp_ls.setup {}
+lsp.pylsp.setup {}
 

@@ -9,3 +9,7 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 vim.opt.number = true
 
+if vim.g.neovide then
+  require('core.neovide')
+end
+
