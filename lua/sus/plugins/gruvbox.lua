@@ -27,6 +27,6 @@ return {
       transparent_mode = false,
     })
 
-    vim.cmd.colo('gruvbox')
+    -- vim.cmd.colo('gruvbox')
   end
 }
